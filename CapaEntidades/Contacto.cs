@@ -8,7 +8,7 @@ namespace CapaEntidades
 {
     public class Contacto
     {
-        public string ClienteAsociado { get; set; }
+        public string Cliente { get; set; }
         public string Rut { get; set; }
         public string Descripcion { get; set; }
         public string Nombres { get; set; }

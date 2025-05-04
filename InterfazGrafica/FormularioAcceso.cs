@@ -17,6 +17,7 @@ namespace InterfazGrafica
         public FormularioAcceso()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -26,6 +27,9 @@ namespace InterfazGrafica
 
         private void btnIngresarAcceso_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos())
+                return;
+
             Acceso usuario = new Acceso()
             {
                 Usuario = txtUsuario.Text,
@@ -36,10 +40,9 @@ namespace InterfazGrafica
 
             if (logicaAcceso.ValidarAcceso(usuario))
             {
-                // Instancia del formulario (NO la entidad Cliente)
                 FormularioCliente formularioCliente = new FormularioCliente();
                 formularioCliente.Show();
-                this.Hide(); // o this.Close();
+                this.Hide();
             }
             else
             {
@@ -47,5 +50,37 @@ namespace InterfazGrafica
                 lblMensaje.Visible = true;
             }
         }
+
+
+        private void submenu1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTituloAcesso_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private bool ValidarCampos()
+        {
+            bool esValido = true;
+            errorProvider1.Clear();
+
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text))
+            {
+                errorProvider1.SetError(txtUsuario, "Ingrese su nombre de usuario");
+                esValido = false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtClave.Text))
+            {
+                errorProvider1.SetError(txtClave, "Ingrese su contraseña");
+                esValido = false;
+            }
+
+            return esValido;
+        }
+
     }
 }

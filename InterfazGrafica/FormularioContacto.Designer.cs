@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblRutContacto = new System.Windows.Forms.Label();
             this.lblClienteContacto = new System.Windows.Forms.Label();
             this.lblDescripcionContacto = new System.Windows.Forms.Label();
@@ -56,6 +57,8 @@
             this.cmbComunaContacto = new System.Windows.Forms.ComboBox();
             this.cmbCiudadContacto = new System.Windows.Forms.ComboBox();
             this.txtRutContacto = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblRutContacto
@@ -188,6 +191,7 @@
             this.btnIngresarContacto.TabIndex = 26;
             this.btnIngresarContacto.Text = "Ingresar";
             this.btnIngresarContacto.UseVisualStyleBackColor = false;
+            this.btnIngresarContacto.Click += new System.EventHandler(this.btnIngresarContacto_Click);
             // 
             // btnLimpiarContacto
             // 
@@ -198,6 +202,7 @@
             this.btnLimpiarContacto.TabIndex = 25;
             this.btnLimpiarContacto.Text = "Limpiar";
             this.btnLimpiarContacto.UseVisualStyleBackColor = false;
+            this.btnLimpiarContacto.Click += new System.EventHandler(this.btnLimpiarContacto_Click);
             // 
             // txtClienteContacto
             // 
@@ -315,6 +320,10 @@
             this.txtRutContacto.Size = new System.Drawing.Size(115, 22);
             this.txtRutContacto.TabIndex = 28;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormularioContacto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,6 +360,8 @@
             this.Controls.Add(this.btnVolverContacto);
             this.Name = "FormularioContacto";
             this.Text = "Contacto";
+            this.Load += new System.EventHandler(this.FormularioContacto_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,5 +398,6 @@
         private System.Windows.Forms.ComboBox cmbComunaContacto;
         private System.Windows.Forms.ComboBox cmbCiudadContacto;
         private System.Windows.Forms.TextBox txtRutContacto;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

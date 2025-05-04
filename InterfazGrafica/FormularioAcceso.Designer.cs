@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTituloAcesso = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -36,6 +37,17 @@
             this.btnIngresarAcceso = new System.Windows.Forms.Button();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.linkRevisarAccesos = new System.Windows.Forms.LinkLabel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menu1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opción1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opción2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opción3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opción4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.submenu1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.submenu2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTituloAcesso
@@ -48,6 +60,7 @@
             this.lblTituloAcesso.TabIndex = 0;
             this.lblTituloAcesso.Text = "ACCESO CRM AIEP";
             this.lblTituloAcesso.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblTituloAcesso.Click += new System.EventHandler(this.lblTituloAcesso_Click);
             // 
             // lblUsuario
             // 
@@ -117,6 +130,71 @@
             this.linkRevisarAccesos.TabStop = true;
             this.linkRevisarAccesos.Text = "Revisar accesos";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu1ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(384, 24);
+            this.menuStrip1.TabIndex = 8;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menu1ToolStripMenuItem
+            // 
+            this.menu1ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opción1ToolStripMenuItem,
+            this.opción2ToolStripMenuItem,
+            this.opción3ToolStripMenuItem,
+            this.opción4ToolStripMenuItem});
+            this.menu1ToolStripMenuItem.Name = "menu1ToolStripMenuItem";
+            this.menu1ToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.menu1ToolStripMenuItem.Text = "Menu 1";
+            // 
+            // opción1ToolStripMenuItem
+            // 
+            this.opción1ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.submenu1ToolStripMenuItem,
+            this.submenu2ToolStripMenuItem});
+            this.opción1ToolStripMenuItem.Name = "opción1ToolStripMenuItem";
+            this.opción1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.opción1ToolStripMenuItem.Text = "Opción 1";
+            // 
+            // opción2ToolStripMenuItem
+            // 
+            this.opción2ToolStripMenuItem.Name = "opción2ToolStripMenuItem";
+            this.opción2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.opción2ToolStripMenuItem.Text = "Opción 2";
+            // 
+            // opción3ToolStripMenuItem
+            // 
+            this.opción3ToolStripMenuItem.Name = "opción3ToolStripMenuItem";
+            this.opción3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.opción3ToolStripMenuItem.Text = "Opción 3";
+            // 
+            // opción4ToolStripMenuItem
+            // 
+            this.opción4ToolStripMenuItem.Name = "opción4ToolStripMenuItem";
+            this.opción4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.opción4ToolStripMenuItem.Text = "Opción 4";
+            // 
+            // submenu1ToolStripMenuItem
+            // 
+            this.submenu1ToolStripMenuItem.Name = "submenu1ToolStripMenuItem";
+            this.submenu1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.submenu1ToolStripMenuItem.Text = "Submenu 1";
+            this.submenu1ToolStripMenuItem.Click += new System.EventHandler(this.submenu1ToolStripMenuItem_Click);
+            // 
+            // submenu2ToolStripMenuItem
+            // 
+            this.submenu2ToolStripMenuItem.Name = "submenu2ToolStripMenuItem";
+            this.submenu2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.submenu2ToolStripMenuItem.Text = "Submenu 2";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormularioAcceso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,9 +209,14 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.lblTituloAcesso);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormularioAcceso";
             this.Text = "Acceso";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,6 +232,15 @@
         private System.Windows.Forms.Button btnIngresarAcceso;
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.LinkLabel linkRevisarAccesos;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menu1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opción1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem submenu1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opción2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opción3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opción4ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem submenu2ToolStripMenuItem;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

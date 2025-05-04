@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblRutCliente = new System.Windows.Forms.Label();
             this.lblPersonalidadCliente = new System.Windows.Forms.Label();
             this.lblDescripcionCliente = new System.Windows.Forms.Label();
@@ -56,6 +57,8 @@
             this.txtDomicilioCliente = new System.Windows.Forms.TextBox();
             this.cmbComunaCliente = new System.Windows.Forms.ComboBox();
             this.cmbCiudadCliente = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblRutCliente
@@ -152,7 +155,7 @@
             // 
             this.lblComunaCliente.AutoSize = true;
             this.lblComunaCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComunaCliente.Location = new System.Drawing.Point(50, 354);
+            this.lblComunaCliente.Location = new System.Drawing.Point(50, 356);
             this.lblComunaCliente.Name = "lblComunaCliente";
             this.lblComunaCliente.Size = new System.Drawing.Size(57, 16);
             this.lblComunaCliente.TabIndex = 21;
@@ -162,11 +165,12 @@
             // 
             this.lblCiudadCliente.AutoSize = true;
             this.lblCiudadCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCiudadCliente.Location = new System.Drawing.Point(50, 383);
+            this.lblCiudadCliente.Location = new System.Drawing.Point(50, 386);
             this.lblCiudadCliente.Name = "lblCiudadCliente";
             this.lblCiudadCliente.Size = new System.Drawing.Size(50, 16);
             this.lblCiudadCliente.TabIndex = 23;
             this.lblCiudadCliente.Text = "Ciudad";
+            this.lblCiudadCliente.Click += new System.EventHandler(this.lblCiudadCliente_Click);
             // 
             // btnContactosCliente
             // 
@@ -188,6 +192,7 @@
             this.btnIngresarCliente.TabIndex = 26;
             this.btnIngresarCliente.Text = "Ingresar";
             this.btnIngresarCliente.UseVisualStyleBackColor = false;
+            this.btnIngresarCliente.Click += new System.EventHandler(this.btnIngresarCliente_Click);
             // 
             // btnLimpiarCliente
             // 
@@ -198,6 +203,7 @@
             this.btnLimpiarCliente.TabIndex = 25;
             this.btnLimpiarCliente.Text = "Limpiar";
             this.btnLimpiarCliente.UseVisualStyleBackColor = false;
+            this.btnLimpiarCliente.Click += new System.EventHandler(this.btnLimpiarCliente_Click);
             // 
             // txtRutCliente
             // 
@@ -303,18 +309,23 @@
             // 
             // cmbComunaCliente
             // 
+            this.cmbComunaCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbComunaCliente.Location = new System.Drawing.Point(180, 353);
             this.cmbComunaCliente.Name = "cmbComunaCliente";
-            this.cmbComunaCliente.Size = new System.Drawing.Size(144, 21);
+            this.cmbComunaCliente.Size = new System.Drawing.Size(144, 24);
             this.cmbComunaCliente.TabIndex = 22;
             // 
             // cmbCiudadCliente
             // 
             this.cmbCiudadCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCiudadCliente.Location = new System.Drawing.Point(180, 380);
+            this.cmbCiudadCliente.Location = new System.Drawing.Point(180, 383);
             this.cmbCiudadCliente.Name = "cmbCiudadCliente";
             this.cmbCiudadCliente.Size = new System.Drawing.Size(144, 24);
             this.cmbCiudadCliente.TabIndex = 24;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FormularioCliente
             // 
@@ -352,6 +363,8 @@
             this.Controls.Add(this.btnContactosCliente);
             this.Name = "FormularioCliente";
             this.Text = "Cliente";
+            this.Load += new System.EventHandler(this.FormularioCliente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,5 +401,6 @@
         private System.Windows.Forms.TextBox txtDomicilioCliente;
         private System.Windows.Forms.ComboBox cmbComunaCliente;
         private System.Windows.Forms.ComboBox cmbCiudadCliente;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
