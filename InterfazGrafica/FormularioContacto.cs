@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace InterfazGrafica
 {
-    public partial class Contacto : Form
+    public partial class FormularioContacto : Form
     {
-        public Contacto()
+        public FormularioContacto()
         {
             InitializeComponent();
         }
 
         private void btnVolverContacto_Click(object sender, EventArgs e)
         {
-            Cliente mv = new Cliente();
+            FormularioCliente mv = new FormularioCliente();
             mv.ShowDialog();
             this.Close(); // Cierra el formulario actual (Contacto)
 

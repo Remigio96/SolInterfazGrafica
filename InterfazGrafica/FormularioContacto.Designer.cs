@@ -1,6 +1,6 @@
 ﻿namespace InterfazGrafica
 {
-    partial class Contacto
+    partial class FormularioContacto
     {
         /// <summary>
         /// Required designer variable.
@@ -315,7 +315,7 @@
             this.txtRutContacto.Size = new System.Drawing.Size(115, 22);
             this.txtRutContacto.TabIndex = 28;
             // 
-            // Contacto
+            // FormularioContacto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -349,7 +349,7 @@
             this.Controls.Add(this.btnLimpiarContacto);
             this.Controls.Add(this.btnIngresarContacto);
             this.Controls.Add(this.btnVolverContacto);
-            this.Name = "Contacto";
+            this.Name = "FormularioContacto";
             this.Text = "Contacto";
             this.ResumeLayout(false);
             this.PerformLayout();

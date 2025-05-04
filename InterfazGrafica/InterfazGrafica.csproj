@@ -46,34 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Acceso.cs">
+    <Compile Include="FormularioAcceso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Acceso.Designer.cs">
-      <DependentUpon>Acceso.cs</DependentUpon>
+    <Compile Include="FormularioAcceso.Designer.cs">
+      <DependentUpon>FormularioAcceso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente.cs">
+    <Compile Include="FormularioCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente.Designer.cs">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <Compile Include="FormularioCliente.Designer.cs">
+      <DependentUpon>FormularioCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Contacto.cs">
+    <Compile Include="FormularioContacto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Contacto.Designer.cs">
-      <DependentUpon>Contacto.cs</DependentUpon>
+    <Compile Include="FormularioContacto.Designer.cs">
+      <DependentUpon>FormularioContacto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Acceso.resx">
-      <DependentUpon>Acceso.cs</DependentUpon>
+    <EmbeddedResource Include="FormularioAcceso.resx">
+      <DependentUpon>FormularioAcceso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cliente.resx">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="FormularioCliente.resx">
+      <DependentUpon>FormularioCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Contacto.resx">
-      <DependentUpon>Contacto.cs</DependentUpon>
+    <EmbeddedResource Include="FormularioContacto.resx">
+      <DependentUpon>FormularioContacto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,6 +96,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj">
+      <Project>{3d308b18-70f7-45b6-ab40-5082a138d504}</Project>
+      <Name>CapaEntidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{d90ac10f-398c-4e6e-a3d8-204329c6ae13}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

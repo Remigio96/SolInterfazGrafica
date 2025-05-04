@@ -1,6 +1,6 @@
 ﻿namespace InterfazGrafica
 {
-    partial class Acceso
+    partial class FormularioAcceso
     {
         /// <summary>
         /// Required designer variable.
@@ -117,7 +117,7 @@
             this.linkRevisarAccesos.TabStop = true;
             this.linkRevisarAccesos.Text = "Revisar accesos";
             // 
-            // Acceso
+            // FormularioAcceso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -131,7 +131,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.lblTituloAcesso);
-            this.Name = "Acceso";
+            this.Name = "FormularioAcceso";
             this.Text = "Acceso";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

@@ -10,21 +10,26 @@ using System.Windows.Forms;
 
 namespace InterfazGrafica
 {
-    public partial class Acceso : Form
+    public partial class FormularioCliente : Form
     {
-        public Acceso()
+        public FormularioCliente()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Cliente_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnIngresarAcceso_Click(object sender, EventArgs e)
+        private void rbCasadoCliente_CheckedChanged(object sender, EventArgs e)
         {
-            Cliente mv = new Cliente();
+
+        }
+
+        private void btnContactosCliente_Click(object sender, EventArgs e)
+        {
+            FormularioContacto mv = new FormularioContacto();
             mv.ShowDialog();
 
         }

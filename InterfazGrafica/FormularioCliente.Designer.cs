@@ -1,6 +1,6 @@
 ﻿namespace InterfazGrafica
 {
-    partial class Cliente
+    partial class FormularioCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -316,7 +316,7 @@
             this.cmbCiudadCliente.Size = new System.Drawing.Size(144, 24);
             this.cmbCiudadCliente.TabIndex = 24;
             // 
-            // Cliente
+            // FormularioCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -350,7 +350,7 @@
             this.Controls.Add(this.btnLimpiarCliente);
             this.Controls.Add(this.btnIngresarCliente);
             this.Controls.Add(this.btnContactosCliente);
-            this.Name = "Cliente";
+            this.Name = "FormularioCliente";
             this.Text = "Cliente";
             this.ResumeLayout(false);
             this.PerformLayout();

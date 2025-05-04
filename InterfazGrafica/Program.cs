@@ -16,7 +16,7 @@ namespace InterfazGrafica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Acceso());
+            Application.Run(new FormularioAcceso());
         }
     }
 }
